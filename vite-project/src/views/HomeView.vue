@@ -1,6 +1,7 @@
 <template>
   <div>
-<DestCard v-for="destination in destinations" :key="destination.name" 
+<DestCard v-for="destination in destinations"
+:key="destination.name" 
 :Destionation="destination"
 />
   </div>
