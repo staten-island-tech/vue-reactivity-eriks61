@@ -1,56 +1,165 @@
 <template>
   <div>
-<DestCard v-for="destination in destinations"
-:key="destination.name" 
-:Destionation="destination"
-/>
+    <DestCard
+      v-for="destination in menuItems"
+      :key="menuItems.FoodNamame"
+      :Destination="destination"
+    />
   </div>
 </template>
 
 <script setup>
-import DestCard from '@/components/icons/DestCard.vue';
-const destinations = [
-        {
-          name: "Venetian Renaissance",
-          International: true,
-          price: 1300,
-          img: "https://images.unsplash.com/photo-1498307833015-e7b400441eb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80&quot;",
-        },
-        {
-          name: "Swiss Mountain Getaway",
-          International: true,
-          price: 800,
-          img: "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1476&q=80&quot;",
-        },
-        {
-          name: "Ibizan Coastal Vacation",
-          International: true,
-          price: 1200,
-          img: "https://images.unsplash.com/photo-1547138494-97041dec734b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80&quot;",
-        },
-        {
-          name: "Hawaiian Vacation",
-          International: false,
-          price: 900,
-          img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1173&q=80&quot;",
-        },
-        {
-          name: "Cascade Mountains",
-          International: false,
-          price: 400,
-          img: "https://images.unsplash.com/photo-1511497584788-876760111969?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80&quot;",
-        },
-        {
-          name: "Egyptian Exploration",
-          International: true,
-          price: 800,
-          img: "https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80&quot;",
-        },
-      ]
+import DestCard from "@/components/DestCard.vue";
+const menuItems = [
+  {
+    FoodName: "Scrambled Eggs",
+    Price: 12,
+    GlutenFree: true,
+    Meal: "Breakfast",
+    Cheap: true,
+    Image: "./images/scrambled.jpg",
+  },
+  {
+    FoodName: "Ham Sandwich",
+    Price: 13,
+    GlutenFree: true,
+    Meal: "Lunch",
+    Cheap: true,
+    Image: "./images/sandwich.jpg",
+  },
+  {
+    FoodName: "Ribeye Steak",
+    Price: 40,
+    GlutenFree: false,
+    Meal: "Dinner",
+    Cheap: false,
+    Image: "./images/ribeye.jpg",
+  },
+  {
+    FoodName: "Burger",
+    Price: 22,
+    GlutenFree: false,
+    Meal: "Lunch",
+    Cheap: false,
+    Image: "./images/hamburger.jpg",
+  },
+  {
+    FoodName: "Chicken Sandwich",
+    Price: 17,
+    GlutenFree: true,
+    Meal: "Lunch",
+    Cheap: true,
+    Image: "./images/chicksandwich.webp",
+  },
+  {
+    FoodName: "Salmon",
+    Price: 23,
+    GlutenFree: true,
+    Meal: "Dinner",
+    Cheap: false,
+    Image: "./images/salmon.jpg",
+  },
+  {
+    FoodName: "Lamb Chops",
+    Price: 30,
+    GlutenFree: false,
+    Meal: "Dinner",
+    Cheap: false,
+    Image: "./images/lambchop.jpg",
+  },
+  {
+    FoodName: "Lamb Gyro",
+    Price: 17,
+    GlutenFree: false,
+    Meal: "Lunch",
+    Cheap: true,
+    Image: "./images/gyro.jpg",
+  },
+  {
+    FoodName: "Pancakes",
+    Price: 14,
+    GlutenFree: false,
+    Meal: "Breakfast",
+    Cheap: true,
+    Image: "./images/pancakes.jpg",
+  },
+  {
+    FoodName: "French Toast",
+    Price: 21,
+    GlutenFree: false,
+    Meal: "Breakfast",
+    Cheap: false,
+    Image: "./images/breakfast.jpg",
+  },
+  {
+    FoodName: "English Breakfast",
+    Price: 30,
+    GlutenFree: false,
+    Meal: "Breakfast",
+    Cheap: false,
+    Image: "./images/engbreakfast.jpg",
+  },
+  {
+    FoodName: "Sushi",
+    Price: 45,
+    GlutenFree: true,
+    Meal: "Lunch",
+    Cheap: false,
+    Image: "./images/sushi.jpg",
+  },
+  {
+    FoodName: "House Salad",
+    Price: 15,
+    GlutenFree: true,
+    Meal: "Lunch",
+    Cheap: true,
+    Image: "./images/salad.jpg",
+  },
+  {
+    FoodName: "Seafood Platter",
+    Price: 55,
+    GlutenFree: true,
+    Meal: "Dinner",
+    Cheap: false,
+    Image: "./images/seafood.jpg",
+  },
+  {
+    FoodName: "Beef Wellington",
+    Price: 44,
+    GlutenFree: false,
+    Meal: "Dinner",
+    Cheap: false,
+    Image: "./images/beef-wellington.jpg",
+  },
+  {
+    FoodName: "Chicken and Rice",
+    Price: 22,
+    GlutenFree: true,
+    Meal: "Dinner",
+    Cheap: false,
+    Image: "./images/chickrice.jpg",
+  },
+  {
+    FoodName: "Tacos",
+    Price: 17,
+    GlutenFree: false,
+    Meal: "Lunch",
+    Cheap: true,
+    Image: "./images/tacos.jpg",
+  },
+  {
+    FoodName: "Spanakopita",
+    Price: 34,
+    GlutenFree: false,
+    Meal: "Lunch",
+    Cheap: false,
+    Image: "./images/spanakopita.jpg",
+  },
+];
 </script>
 
 <style scoped>
 h1 {
-  color: red
+  color: red;
 }
 </style>
