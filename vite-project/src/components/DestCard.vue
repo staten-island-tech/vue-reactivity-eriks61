@@ -3,7 +3,7 @@
       <h1>{{ Destination.name }}</h1>
       <img :src="Destination.img" alt="" />
       <h2>{{ clicked }}</h2>
-      <button @click="increment">Click ME</button>
+      <button @click="increment">Add To Cart</button>
     </div>
   </template>
   
