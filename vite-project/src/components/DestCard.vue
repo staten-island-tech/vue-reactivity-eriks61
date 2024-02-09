@@ -1,7 +1,7 @@
 <template>
     <div>
-      <h1>{{ Destination.name }}</h1>
-      <img :src="Destination.img" alt="" />
+      <h1>{{ menuItem.name }}</h1>
+      <img :src="menuItem.img" alt="" />
       <h2>{{ clicked }}</h2>
       <button @click="increment">Add To Cart</button>
     </div>
