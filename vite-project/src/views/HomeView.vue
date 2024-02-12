@@ -1,10 +1,13 @@
 <template>
-  <div>
+  <div><ul>
     <DestCard
-      v-for="destination in menuItems"
+    v-for="destination in menuItems"
       :key="menuItems.FoodName"
       :Destination="destination"
-    />
+      />
+    </ul>
+      
+  
   </div>
 </template>
 
