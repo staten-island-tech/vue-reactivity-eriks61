@@ -2,7 +2,7 @@
   <div>
     <DestCard
       v-for="destination in menuItems"
-      :key="menuItems.FoodNamame"
+      :key="menuItems.FoodName"
       :Destination="destination"
     />
   </div>
