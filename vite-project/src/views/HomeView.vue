@@ -1,21 +1,15 @@
 <template>
   <div>
-    <form @submit.prevent="addToCart">
-    <input v-model="newMenu">
-    <button>Add To Cart</button>
-    </form>
     <DestCard
-      v-for="menuItem in menuItems"
-      :key="menuItem.FoodName"
+      v-for="destination in menuItems"
+      :key="menuItems.FoodNamame"
       :Destination="destination"
     />
   </div>
 </template>
 
 <script setup>
-//import DestCard from "@/components/DestCard.vue";
-import { ref } from "vue";
-const newMenu = ref('')
+import DestCard from "@/components/DestCard.vue";
 const menuItems = [
   {
     FoodName: "Scrambled Eggs",
@@ -162,9 +156,6 @@ const menuItems = [
     Image: "./images/spanakopita.jpg",
   },
 ];
-function addToCart(){
-  newMenu.value=''
-}
 </script>
 
 <style scoped>
