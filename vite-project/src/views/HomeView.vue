@@ -1,8 +1,8 @@
 <template>
   <div><ul>
-    <DestCard
-    v-for="destination in menuItems"
-      :key="menuItems.FoodName"
+    <MenuItem
+    v-for="destination in destinations"
+      :key="destination.FoodName"
       :Destination="destination"
       />
     </ul>
@@ -12,15 +12,15 @@
 </template>
 
 <script setup>
-import DestCard from "@/components/DestCard.vue";
-const menuItems = [
+import MenuItem from "@/components/MenuItem.vue";
+const destinations = [
   {
     FoodName: "Scrambled Eggs",
     Price: 12,
     GlutenFree: true,
     Meal: "Breakfast",
     Cheap: true,
-    Image: "./images/scrambled.jpg",
+    Image: "/scrambled.jpg",
   },
   {
     FoodName: "Ham Sandwich",
@@ -28,7 +28,7 @@ const menuItems = [
     GlutenFree: true,
     Meal: "Lunch",
     Cheap: true,
-    Image: "./images/sandwich.jpg",
+    Image: "/sandwich.jpg",
   },
   {
     FoodName: "Ribeye Steak",
@@ -36,7 +36,7 @@ const menuItems = [
     GlutenFree: false,
     Meal: "Dinner",
     Cheap: false,
-    Image: "./images/ribeye.jpg",
+    Image: "/ribeye.jpg",
   },
   {
     FoodName: "Burger",
@@ -44,7 +44,7 @@ const menuItems = [
     GlutenFree: false,
     Meal: "Lunch",
     Cheap: false,
-    Image: "./images/hamburger.jpg",
+    Image: "/hamburger.jpg",
   },
   {
     FoodName: "Chicken Sandwich",
@@ -52,7 +52,7 @@ const menuItems = [
     GlutenFree: true,
     Meal: "Lunch",
     Cheap: true,
-    Image: "./images/chicksandwich.webp",
+    Image: "/chicksandwich.webp",
   },
   {
     FoodName: "Salmon",
@@ -60,7 +60,7 @@ const menuItems = [
     GlutenFree: true,
     Meal: "Dinner",
     Cheap: false,
-    Image: "./images/salmon.jpg",
+    Image: "/salmon.jpg",
   },
   {
     FoodName: "Lamb Chops",
@@ -68,7 +68,7 @@ const menuItems = [
     GlutenFree: false,
     Meal: "Dinner",
     Cheap: false,
-    Image: "./images/lambchop.jpg",
+    Image: "/lambchop.jpg",
   },
   {
     FoodName: "Lamb Gyro",
@@ -76,7 +76,7 @@ const menuItems = [
     GlutenFree: false,
     Meal: "Lunch",
     Cheap: true,
-    Image: "./images/gyro.jpg",
+    Image: "/gyro.jpg",
   },
   {
     FoodName: "Pancakes",
@@ -84,7 +84,7 @@ const menuItems = [
     GlutenFree: false,
     Meal: "Breakfast",
     Cheap: true,
-    Image: "./images/pancakes.jpg",
+    Image: "/pancakes.jpg",
   },
   {
     FoodName: "French Toast",
@@ -92,7 +92,7 @@ const menuItems = [
     GlutenFree: false,
     Meal: "Breakfast",
     Cheap: false,
-    Image: "./images/breakfast.jpg",
+    Image: "/breakfast.jpg",
   },
   {
     FoodName: "English Breakfast",
@@ -100,7 +100,7 @@ const menuItems = [
     GlutenFree: false,
     Meal: "Breakfast",
     Cheap: false,
-    Image: "./images/engbreakfast.jpg",
+    Image: "/engbreakfast.jpg",
   },
   {
     FoodName: "Sushi",
@@ -108,7 +108,7 @@ const menuItems = [
     GlutenFree: true,
     Meal: "Lunch",
     Cheap: false,
-    Image: "./images/sushi.jpg",
+    Image: "/sushi.jpg",
   },
   {
     FoodName: "House Salad",
@@ -116,7 +116,7 @@ const menuItems = [
     GlutenFree: true,
     Meal: "Lunch",
     Cheap: true,
-    Image: "./images/salad.jpg",
+    Image: "/salad.jpg",
   },
   {
     FoodName: "Seafood Platter",
@@ -124,7 +124,7 @@ const menuItems = [
     GlutenFree: true,
     Meal: "Dinner",
     Cheap: false,
-    Image: "./images/seafood.jpg",
+    Image: "/seafood.jpg",
   },
   {
     FoodName: "Beef Wellington",
@@ -132,7 +132,7 @@ const menuItems = [
     GlutenFree: false,
     Meal: "Dinner",
     Cheap: false,
-    Image: "./images/beef-wellington.jpg",
+    Image: "/beef-wellington.jpg",
   },
   {
     FoodName: "Chicken and Rice",
@@ -140,7 +140,7 @@ const menuItems = [
     GlutenFree: true,
     Meal: "Dinner",
     Cheap: false,
-    Image: "./images/chickrice.jpg",
+    Image: "/chickrice.jpg",
   },
   {
     FoodName: "Tacos",
@@ -148,7 +148,7 @@ const menuItems = [
     GlutenFree: false,
     Meal: "Lunch",
     Cheap: true,
-    Image: "./images/tacos.jpg",
+    Image: "/tacos.jpg",
   },
   {
     FoodName: "Spanakopita",
@@ -156,7 +156,7 @@ const menuItems = [
     GlutenFree: false,
     Meal: "Lunch",
     Cheap: false,
-    Image: "./images/spanakopita.jpg",
+    Image: "/spanakopita.jpg",
   },
 ];
 </script>

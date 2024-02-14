@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>{{ Destination.name }}</h1>
-    <img :src="Destination.img" alt="" />
+    <h2>{{ Destination.FoodName }}</h2>
+    <img :src="Destination.Image" alt="" />
     <h2>{{ clicked }}</h2>
     <button @click="increment">Add To Cart</button>
   </div>
@@ -10,12 +10,15 @@
 <script setup>
 import { ref } from "vue";
 const props = defineProps({
-  menuItem: Object,
+  Destination: Object,
 });
 //clicker logic
 const clicked = ref(0);
 function increment() {
   clicked.value++;
+}
+function reset(){
+  clicked.value === 0;
 }
 </script>
 
