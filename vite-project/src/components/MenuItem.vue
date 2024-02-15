@@ -16,10 +16,10 @@ const props = defineProps({
 const clicked = ref(0);
 function increment() {
   clicked.value++;
+  Cart.push(Destination.FoodName)
+  console.log(Cart);
 }
-function reset(){
-  clicked.value === 0;
-}
+const Cart = [];
 </script>
 
 <style scoped>
