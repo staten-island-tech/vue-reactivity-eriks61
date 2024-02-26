@@ -1,7 +1,7 @@
 <template>
   <div><ul>
     <MenuItem
-    v-for="destination in destinations"
+    v-for="destination in MenuItems"
       :key="destination.FoodName"
       :Destination="destination"
       />
@@ -13,7 +13,7 @@
 
 <script setup>
 import MenuItem from "@/components/MenuItem.vue";
-const destinations = [
+const MenuItems = [
   {
     FoodName: "Scrambled Eggs",
     Price: 12,
@@ -159,6 +159,7 @@ const destinations = [
     Image: "/spanakopita.jpg",
   },
 ];
+
 </script>
 
 <style scoped>
