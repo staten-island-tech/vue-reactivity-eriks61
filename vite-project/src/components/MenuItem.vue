@@ -4,24 +4,18 @@
     <h2>{{ Destination.FoodName }}</h2>
     <img :src="Destination.Image" alt="" />
     <h2>{{ clicked }}</h2>
-    <button @click="increment">Add To Cart</button>
+    <button @click="addCart(item)">Add To Cart</button>
   </div>
 </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+
 const props = defineProps({
   Destination: Object,
 });
-let Cart = [];
-//clicker logic
-const clicked = ref(0);
-function increment() {
-  clicked.value++;
-  Cart.push(MenuItem.FoodName)
-  console.log(Cart);
-}
+
+import { store } from '../stores/store.js';
 
 </script>
 

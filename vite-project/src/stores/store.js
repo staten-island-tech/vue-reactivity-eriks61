@@ -7,5 +7,6 @@ export const store = reactive({
     },
     addCart(item){
         this.cartItems.push(item.name)
+        console.log(this.cartItems)
     }
 })
