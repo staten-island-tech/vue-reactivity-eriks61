@@ -39,8 +39,8 @@ function increment() {
   margin: 15px;
   border-radius: 2rem;
   padding: 20px;
-  height: 150vh;
-  width: 200vh;
+  height: 45vh;
+  width: 50vh;
   align-items: center;
   flex-direction: row;
 }
