@@ -10,6 +10,6 @@ export const store = reactive({
         console.log(this.cartItems)
     },
     showCart(){
-        
+        this.cartItems
     }
 })

@@ -1,5 +1,8 @@
 <template>
-  <div class = "flex-container">
+  <div id="cart">
+      <p> {{ store.showCart(MenuItems) }}</p>
+    </div>
+  <div class = "flex-container"> 
   <div id="food">
     <h2>{{ Destination.FoodName }}</h2>
     <img :src="Destination.Image" alt="" />
@@ -18,6 +21,7 @@ const props = defineProps({
   Destination: Object,
 });
 
+import { MenuItems } from '@/router/extra';
 import { store } from '../stores/store.js';
 
 </script>
