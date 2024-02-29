@@ -13,6 +13,7 @@
 
 <script setup>
 import MenuItem from "@/components/MenuItem.vue";
+
 const MenuItems = [
   {
     FoodName: "Scrambled Eggs",

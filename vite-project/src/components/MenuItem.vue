@@ -4,8 +4,11 @@
     <h2>{{ Destination.FoodName }}</h2>
     <img :src="Destination.Image" alt="" />
     <h2>{{ clicked }}</h2>
-    <button @click="addCart(item)">Add To Cart</button>
+    <button @click="store.addCart(Destination.FoodName)">Add To Cart {{ store.count }}</button>
   </div>
+<ul>
+  
+</ul>
 </div>
 </template>
 
