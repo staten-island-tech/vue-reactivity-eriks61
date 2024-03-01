@@ -34,8 +34,7 @@ import { store } from '../stores/store.js';
 .cart {
   position: absolute;
   font-size: medium;
-  margin-right: 300px;
-  margin-bottom: 200px;
+
 }
 .flex-container {
   display: flex;
@@ -57,8 +56,8 @@ import { store } from '../stores/store.js';
   flex-direction: row;
 }
 img {
-  width: 50%;
-  height: 50%;
+  width: 80%;
+  height: 80%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
