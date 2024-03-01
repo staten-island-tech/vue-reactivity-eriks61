@@ -1,7 +1,4 @@
 <template>
-  <div id="cart">
-      <p> {{ store.showCart(MenuItems) }}</p>
-    </div>
   <div class = "flex-container"> 
   <div id="food">
     <h2>{{ Destination.FoodName }}</h2>
@@ -9,10 +6,17 @@
     <h2>{{ clicked }}</h2>
     <button @click="store.addCart(Destination.FoodName)">Add To Cart {{ store.count }}</button>
   </div>
-<ul>
-  
-</ul>
+
 </div>
+  <div class="cart" v-if="store.cartItems.length === 0">
+      <h2>Empty Cart</h2>
+    </div>
+    <div v-else>
+      <div v-for="Destination in store.CartItems" :key="Destination.Foodname">
+        <h2>{{ Destination.FoodName }}</h2>
+      </div>
+    </div>
+  
 </template>
 
 <script setup>
@@ -21,17 +25,24 @@ const props = defineProps({
   Destination: Object,
 });
 
-import { MenuItems } from '@/router/extra';
+
 import { store } from '../stores/store.js';
 
 </script>
 
 <style scoped>
+.cart {
+  position: absolute;
+  font-size: medium;
+  margin-right: 300px;
+  margin-bottom: 200px;
+}
 .flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 20px;
+  top: 0; right: 0;
 }
 #food{
   background-color: antiquewhite;
