@@ -12,8 +12,8 @@
       <h2>Empty Cart</h2>
     </div>
     <div v-else>
-      <div v-for="Destination in store.CartItems" :key="Destination.Foodname">
-        <h2>{{ Destination.FoodName }}</h2>
+      <div v-for="item in store.showCart()" :key="item">
+        <h2>{{ item }}</h2>
       </div>
     </div>
   

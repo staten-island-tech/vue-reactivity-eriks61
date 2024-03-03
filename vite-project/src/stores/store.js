@@ -3,13 +3,13 @@ export const store = reactive({
     items : [],
     cartItems : [],
     increment(){
-    this.count++
+    this.items.length++
     },
     addCart(item){
         this.cartItems.push(item)
         console.log(this.cartItems)
     },
     showCart(){
-        this.cartItems
+        return this.cartItems
     }
 })
